@@ -6,51 +6,48 @@ Este repositório contém um guia prático para utilizar os estúdios **Azure Sp
 
 ## 🎙️ Azure Speech Studio
 
-O **Speech Studio** é um conjunto de ferramentas UI para explorar e testar serviços de fala do Azure — incluindo transcrição, síntese, tradução e treinamento de modelos personalizados :contentReference[oaicite:1]{index=1}.
+O **Speech Studio** é um conjunto de ferramentas com interface gráfica para explorar e testar os serviços de fala do Azure — incluindo transcrição, síntese de voz, tradução e avaliação de pronúncia.
 
 ### Principais recursos
-- **Transcrição (Speech-to-Text)**: teste em tempo real ou para lotes, sem código :contentReference[oaicite:2]{index=2}.  
-- **Text-to-Speech**: voices neurais e criação de vozes personalizadas com SSML :contentReference[oaicite:3]{index=3}.  
-- **Tradução de fala**: suporte a tradução entre vários idiomas :contentReference[oaicite:4]{index=4}.  
-- **Reconhecimento por falante**, avaliação de pronúncia, palavras-chave customizadas e galeria de vozes customizadas :contentReference[oaicite:5]{index=5}.
+
+- **Reconhecimento de fala (Speech-to-Text)**: converte voz em texto em tempo real ou por arquivos de áudio.
+- **Síntese de fala (Text-to-Speech)**: gera fala realista a partir de texto com vozes neurais.
+- **Tradução de fala**: traduz falas de um idioma para outro automaticamente.
+- **Identificação do locutor**: reconhece diferentes pessoas falando no mesmo áudio.
+- **Avaliação de pronúncia**: verifica a clareza e correção da pronúncia, útil em apps educacionais.
+- **Criação de vozes personalizadas**: treine vozes sintéticas para usos específicos.
 
 ### Como usar
-1. Acesse [https://ai.azure.com](https://ai.azure.com)  
-2. Crie um projeto **Speech** em Azure AI Foundry  
-3. No playground do Speech, faça upload de um arquivo de áudio e teste transcrição em tempo real  
-4. Explore TTS, tradução, reconhecimento e vozes customizadas
+
+1. Acesse [https://speech.azure.com](https://speech.azure.com)
+2. Faça login com sua conta Microsoft e selecione um recurso de Fala (Speech)
+3. Escolha o serviço desejado (por exemplo, "Speech to Text")
+4. Envie um arquivo de áudio ou fale no microfone
+5. Veja a transcrição, exporte os resultados ou ajuste configurações como idioma, modelo e precisão
 
 ---
 
 ## 📄 Azure Language Studio
 
-O **Language Studio** reúne ferramentas para análise avançada de texto via NLP (NLP, NER, sumarização etc.) :contentReference[oaicite:6]{index=6}.
+O **Language Studio** permite testar modelos de linguagem natural para análise de texto, extração de entidades, sentimentos, sumarização e muito mais — sem precisar escrever código.
 
-### Funcionalidades principais
-- **Named Entity Recognition (NER)**: identifica nomes, locais, organizações  
-- **Extração de frases-chave**: identifica termos importantes  
-- **Análise de sentimento e opinion mining**  
-- **Summarização**: extrativa ou abstrativa, e segmentação de reuniões  
-- **PII detection, Entity Linking, Text Analytics for health** :contentReference[oaicite:7]{index=7}  
-- **Custom ML**: classificação, NER customizado, CLU (intent + entidade), Q&A, workflows de orquestração :contentReference[oaicite:8]{index=8}
+### Principais recursos
+
+- **Análise de sentimento**: identifica se um texto é positivo, negativo ou neutro.
+- **Extração de frases-chave**: detecta termos importantes dentro do texto.
+- **Reconhecimento de entidades nomeadas (NER)**: identifica nomes de pessoas, locais, organizações etc.
+- **Sumarização automática**: cria resumos a partir de textos longos ou transcrições.
+- **Classificação personalizada de texto**: cria modelos para categorizar textos com base em dados fornecidos.
+- **Q&A (perguntas e respostas)**: responde perguntas com base em documentos ou textos carregados.
+- **Conversational Language Understanding (CLU)**: detecta intenções e entidades em comandos ou conversas.
 
 ### Como usar
-1. Crie um projeto **Language** no Azure AI Foundry  
-2. Acesse o playground de Language  
-3. Teste:
-   - extração de nomes e entidades;
-   - extração de frases-chave;
-   - análise de sentimento;
-   - sumarização de textos ou transcrições;
-   - intents com CLU ou QA.
-4. Exporte modelos e integre via SDK, CLI ou REST
 
----
-
-## 🛠️ Como integrar
-
-- Use o **Speech SDK / CLI / REST** para implementar transcrição, síntese, tradução, reconhecimento :contentReference[oaicite:9]{index=9}  
-- Use o **Language SDK / REST** para análise de texto, clasificación, QA, intents :contentReference[oaicite:10]{index=10}
+1. Acesse [https://language.azure.com](https://language.azure.com)
+2. Faça login com sua conta Microsoft e crie um recurso de "Language"
+3. No menu, escolha a funcionalidade que deseja testar (ex: "Análise de Sentimento")
+4. Insira o texto desejado e visualize os resultados
+5. Salve os resultados ou exporte os dados conforme necessário
 
 ---
 
@@ -58,7 +55,7 @@ O **Language Studio** reúne ferramentas para análise avançada de texto via NL
 
 - [Speech Studio - Visão geral](https://learn.microsoft.com/pt-br/azure/ai-services/speech-service/speech-studio-overview)
 - [Text-to-Speech com SSML](https://learn.microsoft.com/pt-br/azure/ai-services/speech-service/speech-synthesis-markup)
-- [Azure Language Studio - Visão geral](https://learn.microsoft.com/pt-br/azure/ai-services/language-service/language-studio)
+- [Language Studio - Visão geral](https://learn.microsoft.com/pt-br/azure/ai-services/language-service/language-studio)
 - [Reconhecimento de Entidades Nomeadas (NER)](https://learn.microsoft.com/pt-br/azure/ai-services/language-service/named-entity-recognition/overview)
 - [Sumarização de texto](https://learn.microsoft.com/pt-br/azure/ai-services/language-service/summarization/overview)
 - [Análise de sentimento](https://learn.microsoft.com/pt-br/azure/ai-services/language-service/sentiment-opinion-mining/overview)
@@ -67,16 +64,13 @@ O **Language Studio** reúne ferramentas para análise avançada de texto via NL
 ---
 
 ## 💡 Dicas
-- Use a versão gratuita do Azure para testes rápidos sem custo inicial  
-- Sempre delete os recursos não utilizados para evitar cobranças  
-- Explore vozes customizadas, análise de sentimento e Q&A para seus casos de uso
+
+- Use a camada gratuita do Azure para testar os serviços sem custo.
+- Delete os recursos após o uso para evitar cobranças acidentais.
+- Explore modelos prontos e exemplos na galeria de cada estúdio.
 
 ---
 
-## 📚 Próximos passos
+## 📚 Sobre o desafio
 
-- Adicionar exemplos de código em Python, C#, JS  
-- Incluir amostras de áudio/texto para testes interativos  
-- Entrar com workflow de CI/CD para automação
-
----
+Esta atividade faz parte de um laboratório prático do curso DIO, com foco no uso das ferramentas **Azure Speech Studio** e **Language Studio** para análise de fala e linguagem natural. O objetivo é aplicar IA generativa e serviços cognitivos na prática, documentando os aprendizados em um repositório organizado.
